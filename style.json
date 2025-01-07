@@ -9,7 +9,8 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key={key}"
+      // "url": "https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key={key}"
+      "url": "https://tuandv1311.github.io/map-style/style.json"
     }
   },
   "glyphs": "https://openmaptiles.seeddao.org/fonts/{fontstack}/{range}.pbf",
