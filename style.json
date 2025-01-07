@@ -1,21 +1,23 @@
 {
   "version": 8,
-  "name": "Basic",
-  "metadata": {
-    "mapbox:autocomposite": false,
-    "mapbox:type": "template",
-    "maputnik:renderer": "mbgljs",
-    "openmaptiles:version": "3.x",
-    "openmaptiles:mapbox:owner": "openmaptiles",
-    "openmaptiles:mapbox:source:url": "mapbox://openmaptiles.4qljc88t"
-  },
+  "name": "OSM OpenMapTiles",
+  "id": "openmaptiles",
+  "center": [0, 0],
+  "zoom": 1,
+  "bearing": 0,
+  "pitch": 0,
   "sources": {
     "openmaptiles": {
       "type": "vector",
       "url": "https://tuandv1311.github.io/map-style/style.json"
+    },
+    "attribution": {
+      "attribution": "<a href=\"https://www.openmaptiles.org/\" target=\"_blank\">&copy; OpenMapTiles</a> <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\">&copy; OpenStreetMap contributors</a>",
+      "type": "vector"
     }
   },
-  "sprite": "https://openmaptiles.github.io/maptiler-basic-gl-style/sprite",
+  "glyphs": "https://openmaptiles.seeddao.org/fonts/{fontstack}/{range}.pbf",
+  "sprite": "https://openmaptiles.seeddao.org/styles/OSM OpenMapTiles/sprite",
   "layers": [
     {
       "id": "background",
@@ -33,7 +35,7 @@
         ["in", "class", "residential", "suburb", "neighbourhood"]
       ],
       "layout": { "visibility": "visible" },
-      "paint": { "fill-color": "hsl(47, 13%, 86%)", "fill-opacity": 0.7 }
+      "paint": { "fill-color": "#e4f3e0", "fill-opacity": 0.7 }
     },
     {
       "id": "landcover_grass",
@@ -256,24 +258,17 @@
     {
       "id": "building",
       "type": "fill",
+      "metadata": {},
       "source": "openmaptiles",
       "source-layer": "building",
+      "minzoom": 12,
+      "maxzoom": 24,
+      "layout": { "visibility": "visible" },
       "paint": {
-        "fill-antialias": true,
         "fill-color": "#e4f3e0",
-        "fill-opacity": {
-          "base": 1,
-          "stops": [
-            [13, 0],
-            [15, 1]
-          ]
-        },
-        "fill-outline-color": {
-          "stops": [
-            [15, "rgba(212, 177, 146, 0)"],
-            [16, "rgba(212, 177, 146, 0.5)"]
-          ]
-        }
+        "fill-opacity": 1,
+        "fill-outline-color": "#e4f3e0",
+        "fill-antialias": true
       }
     },
     {
@@ -368,7 +363,7 @@
       ],
       "layout": { "line-cap": "round", "line-join": "round" },
       "paint": {
-        "line-color": "hsl(0, 0%, 97%)",
+        "line-color": "rgba(255, 255, 255, 1)",
         "line-width": {
           "base": 1.55,
           "stops": [
@@ -1035,6 +1030,5 @@
         "text-halo-width": 2
       }
     }
-  ],
-  "id": "basic"
+  ]
 }
