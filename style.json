@@ -1,20 +1,21 @@
 {
   "version": 8,
-  "name": "OSM OpenMapTiles",
-  "id": "openmaptiles",
-  "center": [0, 0],
-  "zoom": 1,
-  "bearing": 0,
-  "pitch": 0,
+  "name": "Basic",
+  "metadata": {
+    "mapbox:autocomposite": false,
+    "mapbox:type": "template",
+    "maputnik:renderer": "mbgljs",
+    "openmaptiles:version": "3.x",
+    "openmaptiles:mapbox:owner": "openmaptiles",
+    "openmaptiles:mapbox:source:url": "mapbox://openmaptiles.4qljc88t"
+  },
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      // "url": "https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key={key}"
       "url": "https://tuandv1311.github.io/map-style/style.json"
     }
   },
-  "glyphs": "https://openmaptiles.seeddao.org/fonts/{fontstack}/{range}.pbf",
-  "sprite": "https://openmaptiles.seeddao.org/styles/OSM OpenMapTiles/sprite",
+  "sprite": "https://openmaptiles.github.io/maptiler-basic-gl-style/sprite",
   "layers": [
     {
       "id": "background",
@@ -32,7 +33,7 @@
         ["in", "class", "residential", "suburb", "neighbourhood"]
       ],
       "layout": { "visibility": "visible" },
-      "paint": { "fill-color": "#e4f3e0", "fill-opacity": 0.7 }
+      "paint": { "fill-color": "hsl(47, 13%, 86%)", "fill-opacity": 0.7 }
     },
     {
       "id": "landcover_grass",
@@ -367,7 +368,7 @@
       ],
       "layout": { "line-cap": "round", "line-join": "round" },
       "paint": {
-        "line-color": "#FFFFFF",
+        "line-color": "hsl(0, 0%, 97%)",
         "line-width": {
           "base": 1.55,
           "stops": [
@@ -897,7 +898,7 @@
       "layout": {
         "symbol-placement": "line",
         "text-field": "{name:latin} {name:nonlatin}",
-        "text-font": ["Cabin Regular"],
+        "text-font": ["Noto Sans Regular"],
         "text-letter-spacing": 0.1,
         "text-rotation-alignment": "map",
         "text-size": {
@@ -907,11 +908,11 @@
             [20, 14]
           ]
         },
-        "text-transform": "none",
+        "text-transform": "uppercase",
         "visibility": "visible"
       },
       "paint": {
-        "text-color": "#9E9E9E",
+        "text-color": "#000",
         "text-halo-color": "hsl(0, 0%, 100%)",
         "text-halo-width": 2
       }
@@ -1034,5 +1035,6 @@
         "text-halo-width": 2
       }
     }
-  ]
+  ],
+  "id": "basic"
 }
