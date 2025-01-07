@@ -1,11 +1,14 @@
 {
   "version": 8,
-  "name": "OSM OpenMapTiles",
-  "id": "openmaptiles",
-  "center": [0, 0],
-  "zoom": 1,
-  "bearing": 0,
-  "pitch": 0,
+  "name": "Basic",
+  "metadata": {
+    "mapbox:autocomposite": false,
+    "mapbox:type": "template",
+    "maputnik:renderer": "mbgljs",
+    "openmaptiles:version": "3.x",
+    "openmaptiles:mapbox:owner": "openmaptiles",
+    "openmaptiles:mapbox:source:url": "mapbox://openmaptiles.4qljc88t"
+  },
   "sources": {
     "openmaptiles": {
       "type": "vector",
@@ -16,8 +19,8 @@
       "type": "vector"
     }
   },
-  "glyphs": "https://openmaptiles.seeddao.org/fonts/{fontstack}/{range}.pbf",
-  "sprite": "https://openmaptiles.seeddao.org/styles/OSM OpenMapTiles/sprite",
+  "sprite": "https://openmaptiles.github.io/maptiler-basic-gl-style/sprite",
+  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={key}",
   "layers": [
     {
       "id": "background",
@@ -1030,5 +1033,6 @@
         "text-halo-width": 2
       }
     }
-  ]
+  ],
+  "id": "basic"
 }
