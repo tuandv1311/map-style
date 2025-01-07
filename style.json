@@ -1,26 +1,27 @@
 {
   "version": 8,
-  "name": "Basic",
+  "name": "OSM Liberty",
   "metadata": {
-    "mapbox:autocomposite": false,
-    "mapbox:type": "template",
+    "maputnik:license": "https://github.com/maputnik/osm-liberty/blob/gh-pages/LICENSE.md",
     "maputnik:renderer": "mbgljs",
-    "openmaptiles:version": "3.x",
-    "openmaptiles:mapbox:owner": "openmaptiles",
-    "openmaptiles:mapbox:source:url": "mapbox://openmaptiles.4qljc88t"
+    "openmaptiles:version": "3.x"
   },
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "https://tuandv1311.github.io/map-style/style.json"
+      "url": "https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key=q3ekrmCQXXk9jYWa9PbP"
     },
-    "attribution": {
-      "attribution": "<a href=\"https://www.openmaptiles.org/\" target=\"_blank\">&copy; OpenMapTiles</a> <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\">&copy; OpenStreetMap contributors</a>",
-      "type": "vector"
+    "natural_earth_shaded_relief": {
+      "maxzoom": 6,
+      "tileSize": 256,
+      "tiles": [
+        "https://klokantech.github.io/naturalearthtiles/tiles/natural_earth_2_shaded_relief.raster/{z}/{x}/{y}.png"
+      ],
+      "type": "raster"
     }
   },
-  "sprite": "https://openmaptiles.github.io/maptiler-basic-gl-style/sprite",
-  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={key}",
+  "sprite": "https://maputnik.github.io/osm-liberty/sprites/osm-liberty",
+  "glyphs": "https://orangemug.github.io/font-glyphs/glyphs/{fontstack}/{range}.pbf",
   "layers": [
     {
       "id": "background",
@@ -1034,5 +1035,5 @@
       }
     }
   ],
-  "id": "basic"
+  "id": "osm-liberty"
 }
